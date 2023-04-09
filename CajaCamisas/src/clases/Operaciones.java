@@ -1,6 +1,5 @@
 package clases;
 
-import clases.Camisas;
 
 public class Operaciones {
 	private int numCortas;
@@ -19,15 +18,15 @@ public class Operaciones {
 		this.numCasual = casual;
 		this.numFormal = formal;
 	}
-	
+
 	public int venta() {
-		int precioFinal = 0;
-		
-		
-		
+		Camisas corta = Camisas.MANGACORTA;
+		Camisas casual = Camisas.CASUALLARGA;
+		Camisas formal = Camisas.FORMALLARGA;
+		int precioFinal = (this.numCortas * corta.getPrecio()) + (this.numCasual * casual.getPrecio())
+				+ (this.numFormal * formal.getPrecio());
+
 		return precioFinal;
 	}
-	
-	
 
 }
