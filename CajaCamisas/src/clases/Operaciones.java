@@ -21,9 +21,11 @@ public class Operaciones {
 	}
 	
 	public int venta() {
+		int precioFinal = 0;
 		
 		
-		return 1;
+		
+		return precioFinal;
 	}
 	
 	

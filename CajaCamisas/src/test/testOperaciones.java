@@ -10,7 +10,7 @@ class testOperaciones {
 	@Test
 	void test() {
 		Operaciones pruebaOp = new Operaciones();
-		assertEquals(1,pruebaOp.venta());
+		assertEquals(0,pruebaOp.venta());
 	}
 
 }
