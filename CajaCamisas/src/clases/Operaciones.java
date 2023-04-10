@@ -1,6 +1,5 @@
 package clases;
 
-
 public class Operaciones {
 	private int numCortas;
 	private int numCasual;
@@ -19,14 +18,25 @@ public class Operaciones {
 		this.numFormal = formal;
 	}
 
-	public int venta() {
+	public double venta() {
 		Camisas corta = Camisas.MANGACORTA;
 		Camisas casual = Camisas.CASUALLARGA;
 		Camisas formal = Camisas.FORMALLARGA;
-		int precioFinal = (this.numCortas * corta.getPrecio()) + (this.numCasual * casual.getPrecio())
-				+ (this.numFormal * formal.getPrecio());
+		this.numTotal = this.numCortas + this.numCasual + this.numFormal;
+		double descuento = 0;
 
-		return precioFinal;
+		if (3 <= this.numTotal && this.numTotal <= 5) {
+			descuento = ((this.numCortas * corta.getPrecio()) + (this.numCasual * casual.getPrecio())
+					+ (this.numFormal * formal.getPrecio())) * 0.05;
+
+		} else if (this.numTotal > 5) {
+			descuento = ((this.numCortas * corta.getPrecio()) + (this.numCasual * casual.getPrecio())
+					+ (this.numFormal * formal.getPrecio())) * 0.08;
+
+		}
+
+		return ((this.numCortas * corta.getPrecio()) + (this.numCasual * casual.getPrecio())
+				+ (this.numFormal * formal.getPrecio())) - descuento;
 	}
 
 }
