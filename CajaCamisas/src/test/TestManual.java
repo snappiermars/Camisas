@@ -2,7 +2,7 @@ package test;
 
 import clases.Camisas;
 
-public class Test {
+public class TestManual {
 
 	public static void main(String[] args) {
 		for (Camisas camisa : Camisas.values()) {
